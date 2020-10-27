@@ -1,0 +1,19 @@
+{
+  "name": "scoretracker",
+  "version": "1.0.0",
+  "description": "A discord bot for creating custom leaderboards.",
+  "main": ".",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TacticalTechJay/scoretracker.git"
+  },
+  "author": "Jay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TacticalTechJay/scoretracker/issues"
+  },
+  "homepage": "https://github.com/TacticalTechJay/scoretracker#readme"
+}
