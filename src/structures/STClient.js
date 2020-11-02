@@ -1,31 +1,18 @@
 const { AkairoClient, CommandHandler, ListenerHandler } = require('discord-akairo');
+const Handler = require('./Handler');
 
 class scoretrackClient extends AkairoClient {
     constructor(token) {
         super({
-            ownerID: '127888387364487168'
+            ownerID: ['127888387364487168', '328983966650728448']
         }, {
             fetchAllMembers: false,
             disableMentions: 'everyone',
             messageCacheMaxSize: 100
         });
-        this.commandHandler = new CommandHandler(this, {
-            allowMention: true,
-            blockBots: true,
-            directory: './src/commands/',
-            prefix: 'st!',
-            defaultCooldown: 3,
-            automateCategories: true
-        })
-        this.listenerHandler = new ListenerHandler(this, {
-            directory: './src/listeners'
-        })
-        this.listenerHandler.setEmitters({
-            client: this
-        });
-        this.listenerHandler.loadAll();
-        this.commandHandler.loadAll();
         
+        this.Handler = new Handler(this);
+
         this.login(token);
     }
 

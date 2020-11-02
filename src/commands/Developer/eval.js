@@ -41,6 +41,7 @@ module.exports = class EvalCommand extends Command {
             }
             let evaluation = inspect(evaled, { depth: args.depth });
             if (evaluation.length >= 1000) {
+                console.log(evaluation);
                 return message.channel.send('Nibba, dis too lonk.');
             }
             return await message.channel.send(`Done: \`\`\`js\n${evaluation}\`\`\``)    
